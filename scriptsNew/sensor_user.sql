@@ -16,52 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Power`
+-- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `Power`;
+DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Power` (
-  `id_rozetka` int(11) DEFAULT NULL,
-  `time_period` int(11) DEFAULT NULL,
-  `count_power` int(11) DEFAULT NULL,
-  KEY `id_idx` (`id_rozetka`),
-  CONSTRAINT `id_rozetka` FOREIGN KEY (`id_rozetka`) REFERENCES `Rozetka` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Power`
---
-
-LOCK TABLES `Power` WRITE;
-/*!40000 ALTER TABLE `Power` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Power` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `Rozetka`
---
-
-DROP TABLE IF EXISTS `Rozetka`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Rozetka` (
+CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `name` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `state` tinyint(1) DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Rozetka`
+-- Dumping data for table `user`
 --
 
-LOCK TABLES `Rozetka` WRITE;
-/*!40000 ALTER TABLE `Rozetka` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Rozetka` ENABLE KEYS */;
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'e@gmail.ru','example');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -73,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-27  0:07:08
+-- Dump completed on 2019-01-27  3:10:04

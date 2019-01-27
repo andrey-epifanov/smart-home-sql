@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `sensor` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
-USE `sensor`;
 -- MySQL dump 10.13  Distrib 5.6.24, for Win32 (x86)
 --
 -- Host: 77.244.213.173    Database: sensor
@@ -18,27 +16,25 @@ USE `sensor`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Rozetka`
+-- Table structure for table `hibernate_sequence`
 --
 
-DROP TABLE IF EXISTS `Rozetka`;
+DROP TABLE IF EXISTS `hibernate_sequence`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Rozetka` (
-  `id` int(11) NOT NULL,
-  `name` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `state` tinyint(1) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `hibernate_sequence` (
+  `next_val` bigint(20) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Rozetka`
+-- Dumping data for table `hibernate_sequence`
 --
 
-LOCK TABLES `Rozetka` WRITE;
-/*!40000 ALTER TABLE `Rozetka` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Rozetka` ENABLE KEYS */;
+LOCK TABLES `hibernate_sequence` WRITE;
+/*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
+INSERT INTO `hibernate_sequence` VALUES (2);
+/*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +46,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-27  0:03:29
+-- Dump completed on 2019-01-27  3:10:03

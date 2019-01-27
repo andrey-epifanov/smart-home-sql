@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `sensor` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
-USE `sensor`;
 -- MySQL dump 10.13  Distrib 5.6.24, for Win32 (x86)
 --
 -- Host: 77.244.213.173    Database: sensor
@@ -18,28 +16,27 @@ USE `sensor`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Power`
+-- Table structure for table `Rozetka`
 --
 
-DROP TABLE IF EXISTS `Power`;
+DROP TABLE IF EXISTS `Rozetka`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Power` (
-  `id_rozetka` int(11) DEFAULT NULL,
-  `time_period` int(11) DEFAULT NULL,
-  `count_power` int(11) DEFAULT NULL,
-  KEY `id_idx` (`id_rozetka`),
-  CONSTRAINT `id_rozetka` FOREIGN KEY (`id_rozetka`) REFERENCES `Rozetka` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
+CREATE TABLE `Rozetka` (
+  `id` int(11) NOT NULL,
+  `name` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `state` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Power`
+-- Dumping data for table `Rozetka`
 --
 
-LOCK TABLES `Power` WRITE;
-/*!40000 ALTER TABLE `Power` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Power` ENABLE KEYS */;
+LOCK TABLES `Rozetka` WRITE;
+/*!40000 ALTER TABLE `Rozetka` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Rozetka` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-27  0:03:30
+-- Dump completed on 2019-01-27  3:10:03
